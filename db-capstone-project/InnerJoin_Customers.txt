@@ -1,0 +1,5 @@
+SELECT customers.CustomerID, customers.Names, orders.OrderID, orders.TotalCost, menus.MenuName, menus.CourseName
+FROM customersDetails customers INNER JOIN orders orders
+ON customers.CustomerID = orders.customerID
+INNER JOIN menus ON orders.MenuID = menus.MenuID 
+WHERE Cost > 150  ORDER BY Cost;
